@@ -1,2 +1,2 @@
 # passWordGenerator
-### links: https://castelo-codez.github.io/passWordGenerator/
+### link: https://castelo-codez.github.io/passWordGenerator/
