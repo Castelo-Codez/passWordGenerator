@@ -93,34 +93,7 @@ const Functions = {
         return lower_chara[Math.floor(Math.random() * lower_chara.length)];
     },
     $random_numbers() {
-        let numbers = [
-            "a",
-            "b",
-            "c",
-            "d",
-            "e",
-            "f",
-            "g",
-            "h",
-            "i",
-            "j",
-            "k",
-            "l",
-            "m",
-            "n",
-            "o",
-            "p",
-            "q",
-            "r",
-            "s",
-            "t",
-            "u",
-            "v",
-            "w",
-            "x",
-            "y",
-            "z",
-        ];
+        let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
         return numbers[Math.floor(Math.random() * numbers.length)];
     },
     $random_Symbol() {
@@ -164,3 +137,92 @@ function $generation_Pass(length, upper, lower, number, Symbol) {
     }
     return password;
 }
+
+let $arrrrrrrrr = [3, -1, -1, -1, 2, 3, -1, 3, -1, 2, 4, 9, 3];
+function $find_the_most_frequent(arr) {
+    let counter = 0;
+    let Most_Freq;
+    for (let i = 0; i < arr.length; i++) {
+        let count = 0;
+        for (let m = 0; m < arr.length; m++) {
+            if (arr[i] === arr[m]) {
+                count++;
+            }
+            if (count > counter) {
+                counter = count;
+                Most_Freq = arr[i];
+            }
+        }
+    }
+    return Most_Freq;
+}
+// check the letter is true or false
+function $check(string) {
+    let New_str = string.split("");
+    let letters = [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L",
+        "M",
+        "N",
+        "O",
+        "P",
+        "Q",
+        "R",
+        "S",
+        "T",
+        "U",
+        "V",
+        "W",
+        "X",
+        "Y",
+        "Z",
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "z",
+    ];
+    let theModel = letters
+        .slice(
+            letters.indexOf(New_str[0]),
+            letters.indexOf(New_str[New_str.length - 1]) + 1
+        )
+        .join("");
+    if (theModel === string) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log($check("v"));
